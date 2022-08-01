@@ -13,6 +13,7 @@ public class moveSlider : MonoBehaviour
     void Start()
     {
         sliderSpeedX = Random.Range(27,35);
+        
         Rigidbody.velocity = new Vector2(sliderSpeedX, 0);
 
 

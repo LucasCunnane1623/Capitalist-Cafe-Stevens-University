@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Morning.unity
     guid: 464df9837672a844cbbf7ae5381b70de
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 38391cc96882b544ca6bc9c71015d3af
   m_configObjects: {}

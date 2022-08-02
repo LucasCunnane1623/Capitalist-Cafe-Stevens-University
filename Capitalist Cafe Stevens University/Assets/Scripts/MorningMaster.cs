@@ -41,8 +41,8 @@ public class MorningMaster : MonoBehaviour
     {
         GameObject newCustomer = Instantiate(Spawner.NPCPrefab);
         customerList.Add(newCustomer);
-        newCustomer.GetComponent<Rigidbody2D>().transform.position = new Vector2(0, 7);
-        newCustomer.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-3);
+        newCustomer.GetComponent<Rigidbody2D>().transform.position = new Vector2(Random.Range(-2,3) , 7);
+        newCustomer.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-6);
         
     }
 

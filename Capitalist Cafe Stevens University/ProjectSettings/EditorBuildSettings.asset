@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 38391cc96882b544ca6bc9c71015d3af
+  - enabled: 1
+    path: Assets/Scenes/Order Slip Sample.unity
+    guid: 51caf963283faa54a85fea6cd5490078
   m_configObjects: {}

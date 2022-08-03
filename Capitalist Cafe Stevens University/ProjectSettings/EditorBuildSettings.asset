@@ -6,14 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Title.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-
     path: Assets/Scenes/drinkMinigame.unity
     guid: b251936911c28a94fb532f6e442cf4b0
   - enabled: 1
-    path: Assets/Scenes/books.unity
-    guid: c006381336be93141bed55bc828f68ef
-
+    path: Assets/Scenes/Morning.unity
+    guid: 464df9837672a844cbbf7ae5381b70de
   m_configObjects: {}

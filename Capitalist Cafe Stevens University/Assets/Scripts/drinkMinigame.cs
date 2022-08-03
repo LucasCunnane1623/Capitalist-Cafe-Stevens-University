@@ -8,21 +8,27 @@ public class drinkMinigame : MonoBehaviour
     public SpriteRenderer renderSprite;
     public Sprite[] spriteArray;
     private Sprite tempSprite;
+
     public GameObject location1;
     public GameObject location2;
     public GameObject location3;
     public GameObject location4;
     public GameObject location5;
+
     public TMP_Text test;
     public TMP_Text score;
     public TMP_Text gameTimer;
+    public TMP_Text correct;
+
     public Sprite correctSprite;
 
     public int scoreVal;
     public int timeRemaining;
+    public int correctAnswers;
 
     private void Start()
     {
+        CafeManager.foodQuality = 5;
         startTimer();
         drinkSetup();
         StartCoroutine(countdown());
@@ -30,10 +36,10 @@ public class drinkMinigame : MonoBehaviour
 
     private void Update()
     {
-        if (timeRemaining == 0)
+        if (timeRemaining == 0 || correctAnswers == 5)
         {
-            CafeManager.playerStars += scoreVal;
-            SceneManager.LoadScene("books");
+            CafeManager.playerStars += CafeManager.foodQuality;
+            SceneManager.LoadScene("morning");
 
         }
     }
@@ -53,8 +59,8 @@ public class drinkMinigame : MonoBehaviour
 
     public void drinkSetup()
     {
-        shuffle();
         correctSprite = spriteArray[Random.Range(0, spriteArray.Length)];
+        shuffle();
         Debug.Log(correctSprite.name);
         test.SetText("Click on " + correctSprite.name);
         changeSprite();

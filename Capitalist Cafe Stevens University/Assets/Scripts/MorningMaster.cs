@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MorningMaster : MonoBehaviour
 {
@@ -14,9 +15,12 @@ public class MorningMaster : MonoBehaviour
     public List<GameObject> customerList;
     public TMP_Dropdown orderMenu;
     public Sprite Food;
+    public int quotaProgress;
+    public Slider quotaSlider;
     // Start is called before the first frame update
     void Start()
     {
+        setQuota();
         StartCoroutine(SpawnCoroutine());
     }
 
@@ -39,6 +43,18 @@ public class MorningMaster : MonoBehaviour
 
     }
 
+    public void setQuota()
+    {
+        quotaSlider.maxValue = 15;
+
+
+
+
+
+
+    }
+
+
 
     public void SpawnNPC()
     {
@@ -49,15 +65,42 @@ public class MorningMaster : MonoBehaviour
         
     }
 
-    public void TakeToMenu(){
-        List<Sprite> list = new List<Sprite>();
-        List<string> nameList = new List<string>();
-        nameList.Add(Food.name);
-        list.Add(Food);
-        orderMenu.AddOptions(list);
-       
+    public void TakeToMenu()
+    {
+
+        int chosenMinigame = Random.Range(0, 3);
+
+        if (chosenMinigame == 0)
+        {
+
+            SceneManager.LoadScene("drinkMinigame");
+
+
+        }
+        else if (chosenMinigame == 1)
+        {
+
+            SceneManager.LoadScene("CookingMinigame");
+
+        }
+
+        else if (chosenMinigame == 2)
+        {
+
+            SceneManager.LoadScene("Dessert");
+
+
+        }
+
+
+        /* List<Sprite> list = new List<Sprite>();
+         List<string> nameList = new List<string>();
+         nameList.Add(Food.name);
+         list.Add(Food);
+         orderMenu.AddOptions(list);
+        */
+
+
+
     }
-
-
-   
 }

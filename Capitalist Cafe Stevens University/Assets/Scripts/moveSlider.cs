@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class moveSlider : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class moveSlider : MonoBehaviour
             sliderSpeedX = 0;
             Rigidbody.velocity = new Vector2(sliderSpeedX, 0);
             GiveStars();
+            SceneManager.LoadScene("Morning");
         }
 
     }

@@ -12,8 +12,7 @@ public class TitleSceneMaster : MonoBehaviour
     // Start is called before the first frame update
     public void PlayGame()
     {
-        Debug.Log("Load Level 1");
-        SceneManager.LoadScene("Morning");
+        SceneManager.LoadScene("Tutorial");
     }
 
     // Update is called once per frame

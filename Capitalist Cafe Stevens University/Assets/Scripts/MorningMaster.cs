@@ -13,6 +13,7 @@ public class MorningMaster : MonoBehaviour
     public NPCSpawner Spawner;
     public List<GameObject> customerList;
     public TMP_Dropdown orderMenu;
+    public Sprite Food;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +51,9 @@ public class MorningMaster : MonoBehaviour
 
     public void TakeToMenu(){
         List<Sprite> list = new List<Sprite>();
-       
+        List<string> nameList = new List<string>();
+        nameList.Add(Food.name);
+        list.Add(Food);
         orderMenu.AddOptions(list);
        
     }

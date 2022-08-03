@@ -49,8 +49,8 @@ public class MorningMaster : MonoBehaviour
     }
 
     public void TakeToMenu(){
-        List<string> list = new List<string>();
-        list.Add("test");
+        List<Sprite> list = new List<Sprite>();
+       
         orderMenu.AddOptions(list);
        
     }

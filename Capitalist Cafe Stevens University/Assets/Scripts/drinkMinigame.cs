@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class drinkMinigame : MonoBehaviour
 {
     public SpriteRenderer renderSprite;
@@ -14,14 +15,28 @@ public class drinkMinigame : MonoBehaviour
     public GameObject location5;
     public TMP_Text test;
     public TMP_Text score;
+    public TMP_Text gameTimer;
     public Sprite correctSprite;
+
     public int scoreVal;
+    public int timeRemaining;
+
     private void Start()
     {
+        startTimer();
         drinkSetup();
+        StartCoroutine(countdown());
     }
 
+    private void Update()
+    {
+        if (timeRemaining == 0)
+        {
+            CafeManager.playerStars += scoreVal;
+            SceneManager.LoadScene("books");
 
+        }
+    }
     public void shuffle()
     {
         for (int i = 0; i < spriteArray.Length; i++)
@@ -64,8 +79,26 @@ public class drinkMinigame : MonoBehaviour
 
 
     }
-    
+
+   void startTimer()
+    {
+        timeRemaining = 30;
+        gameTimer.SetText("Time Remaining: " + timeRemaining);
 
 
+
+
+    }
+     IEnumerator countdown()
+    {
+        while (timeRemaining > 0)
+        {
+            yield return new WaitForSeconds(1);
+
+            timeRemaining--;
+
+            gameTimer.SetText("Time Remaining: " + timeRemaining);
+        }
+    }
 
 }

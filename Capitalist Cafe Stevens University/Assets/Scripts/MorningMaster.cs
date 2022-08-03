@@ -68,7 +68,7 @@ public class MorningMaster : MonoBehaviour
     public void TakeToMenu()
     {
 
-        int chosenMinigame = Random.Range(0, 3);
+        int chosenMinigame = Random.Range(0, 2);
 
         if (chosenMinigame == 0)
         {

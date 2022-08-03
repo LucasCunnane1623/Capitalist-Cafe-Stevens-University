@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Morning.unity
     guid: 464df9837672a844cbbf7ae5381b70de
+  - enabled: 1
+    path: Assets/Scenes/Dessert.unity
+    guid: 309c04c81fa72bc45a670266bc8b6624
+  - enabled: 1
+    path: Assets/Scenes/CookingMinigame.unity
+    guid: 01a09b7455f96964a91e10f7c2489bb4
   m_configObjects: {}

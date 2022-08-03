@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using TMPro;
 
 public class MorningMaster : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MorningMaster : MonoBehaviour
 
     public NPCSpawner Spawner;
     public List<GameObject> customerList;
+    public TMP_Dropdown orderMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +49,10 @@ public class MorningMaster : MonoBehaviour
     }
 
     public void TakeToMenu(){
-        SceneManager.LoadScene("Order Slip Sample");
+        List<string> list = new List<string>();
+        list.Add("test");
+        orderMenu.AddOptions(list);
+       
     }
 
 

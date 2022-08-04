@@ -36,10 +36,19 @@ public class drinkMinigame : MonoBehaviour
 
     private void Update()
     {
-        if (timeRemaining == 0 || correctAnswers == 5)
+        if (timeRemaining == 0)
         {
-            CafeManager.playerStars += CafeManager.foodQuality;
+            CafeManager.customersServed++;
             SceneManager.LoadScene("morning");
+
+        }
+        else if(correctAnswers == 5)
+        {
+            CafeManager.customersServed++;
+            CafeManager.QuotaScore += CafeManager.foodQuality;
+            SceneManager.LoadScene("morning");
+
+
 
         }
     }
@@ -88,7 +97,7 @@ public class drinkMinigame : MonoBehaviour
 
    void startTimer()
     {
-        timeRemaining = 30;
+        timeRemaining = 10;
         gameTimer.SetText("Time Remaining: " + timeRemaining);
 
 

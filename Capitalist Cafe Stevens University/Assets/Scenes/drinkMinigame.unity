@@ -1050,7 +1050,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.5849056, g: 0.012185534, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1636,11 +1636,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderSprite: {fileID: 0}
   spriteArray:
-  - {fileID: 21300000, guid: a441fd5a6dc8dd847a95b9e7af26f24b, type: 3}
-  - {fileID: 21300000, guid: 4c2bd563175089a4aaaa5095da6444a0, type: 3}
-  - {fileID: 21300000, guid: 69d5c06671fa7d6458db2c28e6f19a7f, type: 3}
-  - {fileID: 21300000, guid: edcaa88b220951b4a83e33e21b5cbffd, type: 3}
-  - {fileID: 21300000, guid: 9f262916f3c190a47aca7a21d86f0dd8, type: 3}
+  - {fileID: 21300000, guid: 7c93fe5f66c56524a9ebdb5ab5bc14aa, type: 3}
+  - {fileID: 21300000, guid: eef0b88e00be61a469e355f8adfcc5d6, type: 3}
+  - {fileID: 21300000, guid: c868ed4ef5fa7744ca600af63cfc5a29, type: 3}
+  - {fileID: 21300000, guid: d25f7453448b55c43af60d7b713cacbe, type: 3}
+  - {fileID: 21300000, guid: b2be0723403c0764ea4a029e2257c7b9, type: 3}
   location1: {fileID: 45821489}
   location2: {fileID: 1342613262}
   location3: {fileID: 1435970812}

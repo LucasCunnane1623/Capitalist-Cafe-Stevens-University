@@ -29,6 +29,9 @@ public class moveSlider : MonoBehaviour
             sliderSpeedX = 0;
             Rigidbody.velocity = new Vector2(sliderSpeedX, 0);
             GiveStars();
+            CafeManager.customersServed++;
+            CafeManager.foodQuality = currentStarAmt;
+            CafeManager.QuotaScore += CafeManager.foodQuality;
             SceneManager.LoadScene("Morning");
         }
 

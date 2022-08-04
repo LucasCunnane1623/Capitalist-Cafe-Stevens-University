@@ -14,12 +14,17 @@ public class MorningMaster : MonoBehaviour
     public NPCSpawner Spawner;
     public List<GameObject> customerList;
     public TMP_Dropdown orderMenu;
+    public TMP_Text tempQuotaScore;
     public Sprite Food;
     public int quotaProgress;
     public Slider quotaSlider;
+    public TMP_Text totalCustomersServed;
     // Start is called before the first frame update
     void Start()
     {
+        totalCustomersServed.SetText("Customers Served "+CafeManager.customersServed + "" + " of " + maxNPCNum + "");
+        quotaProgress += CafeManager.QuotaScore;
+        tempQuotaScore.SetText(quotaProgress + "");
         setQuota();
         StartCoroutine(SpawnCoroutine());
     }
@@ -27,17 +32,25 @@ public class MorningMaster : MonoBehaviour
     // Update is called once per frame
     //  NPCPrefab.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -3);
 
+    private void FixedUpdate()
+    {
+        if (CafeManager.customersServed== maxNPCNum)
+        {
+            SceneManager.LoadScene("books");
 
+
+        }
+    }
     IEnumerator SpawnCoroutine()
     {
-        int i = 0;
-        while (i < maxNPCNum)
+        
+        while (CafeManager.customersServed != maxNPCNum)
         {
 
             SpawnNPC();
             yield return new WaitForSeconds(20);
 
-            i++;
+            
 
         }
 

@@ -12,6 +12,10 @@ public class TitleSceneMaster : MonoBehaviour
     // Start is called before the first frame update
     public void PlayGame()
     {
+        CafeManager.finalScore = 0;
+        CafeManager.customersServed = 0;
+        CafeManager.foodQuality = 5;
+        CafeManager.QuotaScore = 0;
         Debug.Log("Load Level 1");
         SceneManager.LoadScene("Morning");
     }

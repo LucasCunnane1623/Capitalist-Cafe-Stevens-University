@@ -36,7 +36,8 @@ public class MorningMaster : MonoBehaviour
     {
         if (CafeManager.customersServed== maxNPCNum)
         {
-            SceneManager.LoadScene("books");
+            CafeManager.finalScore = quotaProgress;
+            SceneManager.LoadScene("gameEnd");
 
 
         }
@@ -81,7 +82,7 @@ public class MorningMaster : MonoBehaviour
     public void TakeToMenu()
     {
 
-        int chosenMinigame = Random.Range(0, 2);
+        int chosenMinigame = Random.Range(0, 3);
 
         if (chosenMinigame == 0)
         {

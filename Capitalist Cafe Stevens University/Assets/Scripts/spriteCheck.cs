@@ -27,8 +27,9 @@ public class spriteCheck : MonoBehaviour
         {
             Debug.Log("I Work!");
             miniDrink.drinkSetup();
-            miniDrink.scoreVal++;
-            miniDrink.score.SetText(miniDrink.scoreVal + "");
+            miniDrink.correctAnswers++;
+            miniDrink.correct.SetText("Correct Answers  " + miniDrink.correctAnswers);
+            miniDrink.score.SetText("Star Quality "+ CafeManager.foodQuality + "");
         }
 
         else if (Input.GetMouseButtonDown(0) && master.GetComponent<drinkMinigame>().correctSprite != this.GetComponent<SpriteRenderer>().sprite)
@@ -36,8 +37,8 @@ public class spriteCheck : MonoBehaviour
 
             Debug.Log(":(");
             miniDrink.drinkSetup();
-            miniDrink.scoreVal--;
-            miniDrink.score.SetText(miniDrink.scoreVal + "");
+            CafeManager.foodQuality--;
+            miniDrink.score.SetText("Star Quality " + CafeManager.foodQuality + "");
         }
         else
         {
